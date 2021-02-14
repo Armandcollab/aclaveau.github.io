@@ -1,0 +1,300 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Museo Sans", "Lucida Grande", Arial, sans-serif;
+  background-color: #F6F7F8;
+}
+
+/* Partie qui concerne seuelement la bar de navigation*/
+
+header {
+  display: flex;
+  float: none;
+  width: 100%;
+  right: auto;
+  background-color: #0E91A1;
+}
+
+a {
+  color: #ffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li.active>a {
+  background: #146c78;
+}
+
+li {
+  list-style: none;
+}
+
+header img {
+  margin: 0em 2em;
+  height: 60px;
+}
+
+.centre-menu {
+  align-content: center;
+}
+
+.menu-grand {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+}
+
+footer {
+  margin: 2em auto 0;
+  width: 100%;
+  color: gray;
+  text-align: right;
+}
+
+/* Ce qui concerne le CV */
+
+div.presentation h1 {
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif, bold;
+  color: #424242;
+}
+
+div.presentation h2 {
+  color: #cfcfcf;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgb(87, 87, 87);
+}
+
+div.presentation {
+  position: relative;
+  margin-bottom: 80px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.lignebleu {
+  border: 2px #40aab6 solid;
+  margin-bottom: 100px;
+}
+
+div.presentation img {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  width: 8%;
+  border: 3px darkgray solid;
+  border-radius: 100%;
+}
+
+article>div {
+  position: relative;
+  border: 1px #F6F7F8 solid;
+}
+
+canvas {
+  width: 50px;
+  height: 50px;
+  border: 3px #40aab6 solid;
+  background: #40aab6;
+  border-radius: 100%;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+}
+
+div h2 {
+  padding-left: 70px;
+}
+
+article>div>hr {
+  color: #e6e6e6;
+}
+
+article div {
+  margin: 10px;
+  margin-left: 30px;
+}
+
+div#Comp hr.bleu {
+  display: flex;
+  height: 4px;
+  background-color: #40aab6;
+  border: none;
+}
+
+div#Comp hr.gris {
+  display: flex;
+  background-color: #dfdfdf;
+  height: 4px;
+  border: none;
+}
+
+.barcomp {
+  display: flex;
+  justify-content: start;
+}
+
+#Comp1 hr.bleu {
+  width: 70%;
+}
+
+#Comp1 hr.gris {
+  width: 30%;
+}
+
+#Comp2 hr.bleu {
+  width: 60%;
+}
+
+#Comp2 hr.gris {
+  width: 40%;
+}
+
+#Comp3 hr.bleu {
+  width: 65%;
+}
+
+#Comp3 hr.gris {
+  width: 35%;
+}
+
+#Comp4 hr.bleu {
+  width: 40%;
+}
+
+#Comp4 hr.gris {
+  width: 60%;
+}
+
+#Comp5 hr.bleu {
+  width: 95%;
+}
+
+#Comp5 hr.gris {
+  width: 05%;
+}
+
+ul ul {
+  list-style-type: none;
+  margin-bottom: 80px;
+}
+
+div.formatliste>ul {
+  margin-left: 60px;
+}
+
+.textbleu {
+  color: #40aab6;
+}
+
+.gras {
+  font-weight: bold;
+}
+
+.grisclaire {
+  color: #a3a3a3;
+}
+
+#contact a {
+  color: #40aab6;
+}
+
+#contact a:hover {
+  color: #146c78;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  /* Partie qui concerne seuelement la bar de navigation*/
+  nav.grand {
+    display: flex;
+    margin: 0 auto 0 auto;
+  }
+  nav.petit {
+    display: none;
+  }
+  header a {
+    padding: 8px 15px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 5px;
+  }
+  header li {
+    margin: auto 4px;
+  }
+  header a:hover {
+    background-color: #146c78;
+  }
+  /* Partie correspondante aux changement sur le corps de la page */
+  .coteacote {
+    display: flex;
+    justify-content: space-around;
+  }
+  article.coteacote>div {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Partie qui concerne seuelement la bar de navigation*/
+  nav.grand {
+    display: none;
+  }
+  .menu-petit {
+    position: relative;
+    margin: 1vh 10vw;
+  }
+  .petit>ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  ul.deroulant {
+    display: none;
+    top: 100%;
+    left: -50px;
+    z-index: 1000;
+    padding: 0;
+    margin: 0 0 12px 25px;
+  }
+  .menu-petit:hover ul.deroulant {
+    display: block;
+    position: absolute;
+    background-color: #ffffff;
+    top: 0px;
+  }
+  /* Partie correspondant aux formes géométriques pour le menu en petit écran*/
+  .carre {
+    position: relative;
+    display: inline-block;
+    width: 10vw;
+    height: 10vw;
+  }
+  .rectangle {
+    position: absolute;
+    margin: 1vw;
+    width: 8vw;
+    height: 1vw;
+    background: #F6F7F8;
+    border-radius: 5px;
+  }
+  div.rectangle:nth-of-type(3n) {
+    margin-top: 2vw;
+  }
+  div.rectangle:nth-of-type(3n+1) {
+    margin-top: 4.5vw;
+  }
+  div.rectangle:nth-of-type(3n+2) {
+    margin-top: 7vw;
+  }
+  header a {
+    display: block;
+    color: #4DBCB6;
+    padding: 5px 20px;
+  }
+  header a:hover {
+    background-color: #E5E5E5;
+  }
+  /* Partie correspondante aux changement sur le corps de la page */
+}
